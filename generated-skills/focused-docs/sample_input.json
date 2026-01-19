@@ -1,0 +1,25 @@
+{
+  "documentation_request": {
+    "purpose": "Create architecture documentation for new microservices system",
+    "target_audience": "development team and AI coding assistants",
+    "scope": [
+      "system overview",
+      "service components and responsibilities",
+      "communication patterns between services",
+      "data flow and persistence strategy",
+      "deployment architecture"
+    ],
+    "project_type": "microservices platform",
+    "project_size": "medium",
+    "constraints": [
+      "no code examples",
+      "natural language only",
+      "no links between documents",
+      "discoverability through file/directory names only",
+      "README.md pattern for main content",
+      "optimized for AI tool context retrieval"
+    ],
+    "existing_documentation": "single README.md file (500 lines)",
+    "special_requirements": "separate concerns into individual files with single responsibility, use README.md as main content in each directory"
+  }
+}
