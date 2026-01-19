@@ -8,6 +8,12 @@ alwaysApply: true
 
 This skill automatically applies to ALL documentation tasks. Whenever creating, editing, or restructuring any documentation (.md files, README, specs, guides), follow these principles.
 
+**Ask Before Assuming**: When there are multiple valid approaches, ask the user to choose rather than assuming. This is especially important for:
+- Directory organization (flat vs. nested, topic groupings)
+- Level of detail (high-level overview vs. granular breakdowns)
+- Scope boundaries (what to include/exclude)
+- File structure for complex domains
+
 ## Core Philosophy
 
 **Structure over Snippets**: Documentation describes WHAT to do in clear natural language, not HOW with code examples. This prevents:
