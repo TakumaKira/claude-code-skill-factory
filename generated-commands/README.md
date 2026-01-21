@@ -45,7 +45,41 @@ Custom slash commands created using the Slash Command Factory. These commands pr
 
 **Purpose**: Comprehensive marketing research and analysis workflows
 
-**Documentation**: [marketing-research/README.md](marketing-research/README.md)
+**Documentation**: [marketing-research/HOW_TO_USE.md](marketing-research/HOW_TO_USE.md)
+
+---
+
+### 3. /review
+
+**Purpose**: Orchestrate parallel code review across requirements, test coverage, and test execution
+
+**Features**:
+- Flexible scope: current changes, PR, entire project, or specific directory
+- Parallel execution of requirements and test-coverage reviewers
+- Sequential test execution for safety
+- Unified report synthesizing all findings
+
+**Usage**:
+```bash
+/review                    # Review current changes
+/review the PR             # Review current branch vs main
+/review the entire project # Full project review
+/review src/auth/          # Review specific directory
+```
+
+**What it does**:
+1. **Detects scope** from your input (current changes, PR, project, or path)
+2. **Gathers context** (git status, diff, changed files)
+3. **Parallel Phase**: Runs requirements-compliance-reviewer + test-coverage-reviewer
+4. **Sequential Phase**: Runs test-runner-diagnostician
+5. **Synthesizes** all findings into unified report with action items
+
+**Documentation**: [review/README.md](review/README.md)
+
+**Required Agents**:
+- **requirements-compliance-reviewer** - `~/.claude/agents/requirements-compliance-reviewer.md`
+- **test-coverage-reviewer** - `~/.claude/agents/test-coverage-reviewer.md`
+- **test-runner-diagnostician** - `~/.claude/agents/test-runner-diagnostician.md`
 
 ---
 
@@ -186,5 +220,5 @@ See [../documentation/references/](../documentation/references/) for official ex
 ---
 
 **Version**: 1.0.0
-**Last Updated**: November 2025
-**Total Commands**: 2
+**Last Updated**: January 2026
+**Total Commands**: 3
